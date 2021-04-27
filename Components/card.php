@@ -1,5 +1,5 @@
 <h3 id="texto2"><strong>3. O que fazemos</strong></h3>
-<div class="container">
+<div class="container carta">
     <div class="card">
         <div class="imgBx">
             <img src="./Images/2.jpg" alt="123">
