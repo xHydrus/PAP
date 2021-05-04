@@ -1,7 +1,7 @@
 <div class="row footer" style="margin-right: 0px;margin-left: 0px;">
     <div class="col-sm">
         <br><br>
-        <a href="#"><img class="logo" src="Images/logo1.png" fluid alt="logo"></a>
+        <a href="?pagina=Home"><img class="logo" src="Images/logo1.png" fluid alt="logo"></a>
     </div>
     <div class="col-sm icons">
         <br><br><br>
