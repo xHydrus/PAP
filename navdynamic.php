@@ -8,7 +8,7 @@
             include "Components/carrosel.php";
         break;
         case 'Projetos':
-            include "Components/carrosel.php";
+            include "Components/projetos.php";
         break;
         case 'Contactos':
             include "Components/Contactos.php";
