@@ -6,7 +6,7 @@
 <?php include "PreLoader/script.php"; ?>
 <body>
     <div>
-        <?php include "PreLoader/Loader.php"; ?>
+        <!--include "PreLoader/Loader.php";-->
         <?php include "HeaderFooter/Nav.php";?>
         <?php if(isset($_GET['pagina'])){
 				$pagina=$_GET['pagina'];

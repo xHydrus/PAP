@@ -4,7 +4,6 @@ body{
   align-items: center;
   font-family: 'Courier New', monospace;
   text-align: center;
-  font-size: 15px;
 }
 header {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
@@ -14,12 +13,12 @@ header {
   position: relative;
   overflow: hidden;
 }
-.container{
+/*Inicio Nav*/
+.navegar{
   max-width: 100rem;
   width: 100%;
   margin: 0 auto;
 }
-
 nav {
   width: 100%;
   height: 15vh;
@@ -136,32 +135,49 @@ nav ul li a:hover::before,nav ul li a:hover::after {
     opacity: 1;
   }
 }
-::-webkit-scrollbar{
-    width: 5px;
-}
-::-webkit-scrollbar-track{
-    border: 5px solid #eee;
-}
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(45deg,black,red);
-    border-radius: 10px;
-}
-.footer{
-    width: 100%;
-    background: #eee;
-  }
-.logo{
-  width: 30%;
-}
 .logo1{
   width: 5%;
 }
-.icons{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*Fim Nav*/
+/*Inicio ScrollBar*/
+::-webkit-scrollbar{
+  width: 5px;
 }
-
+::-webkit-scrollbar-track{
+  border: 5px solid #eee;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(45deg,black,red);
+  border-radius: 10px;
+}
+@media screen and (max-width: 800px) {
+.logo{
+  width: 150px;
+}
+}
+[type=radio] {
+  display: none;
+}
+/*Fim ScrollBar*/
+/*Inicio Footer*/
+.footer{
+  width: 100%;
+  background: #eee;
+}
+.footer1{
+  background: #eee;
+}
+.logo{
+  width: 30%;
+}
+.brand span {
+  color: crimson;
+}
+.icons{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 ul{
   position: relative;
   display: flex;
@@ -201,29 +217,8 @@ ul li a.insta:hover{
   color: #C13584;
   border-bottom: 4px solid #C13584;
 }
-
-.brand span {
-  color: crimson;
-}
-@media screen and (max-width: 800px) {
-  .logo{
-    width: 150px;
-  }
-}
-.footer1{
-    background: #eee;
-}
-.brand span {
-    color: crimson;
-}
-.box1{
-  background: #eee;
-}
-
-[type=radio] {
-    display: none;
-}
-
+/*Fim Footer*/
+/*Inicio Textos Home*/
 #texto1{
   margin-top: 5rem;
   border-bottom: 1px solid red;
@@ -237,7 +232,11 @@ ul li a.insta:hover{
   margin-left: 35%;
   width: 30%;
 }
-
+/*Fim Textos Home*/
+/*Inicio Carrosel*/
+.box1{
+  background: #eee;
+}
 #slider {
   margin-top: 3rem;
   margin-bottom: 5rem;
@@ -313,25 +312,8 @@ ul li a.insta:hover{
   background-image: url(https://i.ytimg.com/vi/rPscqv-QZCU/maxresdefault.jpg); 
   background-size: cover;
 }
-
-.branding{
-  width: 35%;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.webdesign{
-  width: 50%;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.socialmedia{
-  width: 35%;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
+/*Fim Carrosel*/
+/*Inicio PreLoadder*/
 .loader-wrapper {
   width: 100%;
   height: 100%;
@@ -342,7 +324,7 @@ ul li a.insta:hover{
   display:flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 9;
 }
 .loader {
   position: absolute;
@@ -454,59 +436,8 @@ ul li a.insta:hover{
     border-radius: 10px;
   }
 }
-.carta{
-  position: relative;
-  width: 1100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  min-height: 100vh;
-}
-.carta .card{
-  position: relative;
-  max-width: 330px;
-  height: 260px;
-  background: #fff;
-  margin: 0px 30px;
-  padding: 20px 15px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-  transition: 0.3s ease-in-out;
-}
-.carta .card:hover{
-  height: 500px;
-}
-.carta .card .imgBx{
-  position: relative;
-  width: 260px;
-  height: 260px;
-  top: -60px;
-  left: 20px;
-  z-index: 1;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-.carta .card .imgBx img{
-  max-width: 100%;
-  border-radius: 4px;
-}
-.carta .card .content{
-  position: relative;
-  margin-top: -140px;
-  padding: 10px 15px;
-  text-align: center;
-  color: #111;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
-}
-.carta .card:hover .content{
-  visibility: visible;
-  opacity: 1;
-  margin-top: -40px;
-  transition: 0.3s;
-}
+/*Fim PreLoadder*/
+/*Inicio Contactos*/
 .contactotodo{
   width: 100%;
   height: 100vh;
@@ -587,6 +518,8 @@ ul li a.insta:hover{
   padding: 10px 0;
   cursor: pointer;
 }
+/*Fim Contactos*/
+/*Inicio Projetos*/
 .box{
   width: 1200px;
   display: grid;
@@ -661,7 +594,6 @@ ul li a.insta:hover{
   text-align: center;
 }
 
-
 .cartaprojeto .detalhes h2{
   margin: 0;
   padding: 0;
@@ -678,3 +610,85 @@ ul li a.insta:hover{
   display: block;
   margin-top: 5px;
 }
+/*Fim Projetos*/
+/*Inicio Card*/
+.carta{
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.carta .card{
+  position: relative;
+}
+.carta .card .face{
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+.carta .card .face.face1{
+  position: relative;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+.carta .card:hover .face.face1{
+  background: #ff0057;
+  transform: translateY(0);
+}
+.carta .card .face.face1 .content{
+  opacity: 0.2;
+  transition: 0.5s;
+}
+.carta .card:hover .face.face1 .content{
+  opacity: 1;
+}
+.carta .card .face.face1 .content img{
+  max-width: 100px;
+
+}
+.carta .card .face.face1 .content h3{
+  margin: 10px 0 0;
+  padding: 0;
+  color: #eee;
+  text-align: center;
+  font-size: 1.5em;
+}
+.carta .card .face.face2{
+  position: relative;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transform: translateY(-100px);
+}
+.carta .card:hover .face.face2{
+  transform: translateY(0);
+}
+.carta .card .face.face2 .content p{
+  margin: 0;
+  padding: 0;
+}
+.carta .card .face.face2 .content a{
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #333;
+  transition: 0.5s;
+  border-radius: 3px;
+}
+.carta .card .face.face2 .content a:hover{
+  background: crimson;
+  color: #fff;
+}
+/*Fim Card*/
