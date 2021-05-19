@@ -1,138 +1,152 @@
+*{
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 0;
+}
 body{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Courier New', monospace;
   text-align: center;
 }
+/*Inicio Nav*/
 header {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url("https://miro.medium.com/max/3060/1*rGiHBnlqf6-koapA2DzUoA.jpeg")
       center no-repeat;
   background-size: cover;
   position: relative;
-  overflow: hidden;
 }
-/*Inicio Nav*/
 .navegar{
   max-width: 100rem;
   width: 100%;
   margin: 0 auto;
 }
-nav {
-  width: 100%;
-  height: 15vh;
+nav{
+  height: 10vh;
 }
-
-nav ul li a{
-  padding: 1rem 0;
-  margin: 0 3rem;
-  position: relative;
-  letter-spacing: 2px;
-}
-
-nav ul li a:last-child {
-  margin-right: 0;
-}
-
-nav ul li a::before,nav ul li a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: crimson;
-  left: 0;
-  transform: scaleX(0);
-  transition: all 0.5s;
-}
-
-nav ul li a::before {
-  top: 0;
-  transform-origin: left;
-}
-
-nav ul li a::after {
-  bottom: 0;
-  transform-origin: right;
-}
-
-nav ul li a:hover::before,nav ul li a:hover::after {
-  transform: scaleX(1);
-}
-.nav-links {
+.nav-links{
   display: flex;
   list-style: none;
-  width: 90%;
+  width: 50%;
   height: 100%;
   justify-content: space-around;
   align-items: center;
+  margin-left: auto;
 }
-
-.nav-links li a {
+.nav-links li a{
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+}
+/*Inicio barras links*/
+nav ul li a{
+ padding: 1rem 0;
+ margin: 0 3rem;
+ position: relative;
+ letter-spacing: 2px;
 }
 
-@media screen and (max-width: 700px) {
-  .line {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 5px;
-  }
-  .logo{
-    margin-left: 8%;
-    width: 15%;
-  }
-  nav {
-    position: relative;
-  }
+nav ul li a:last-child {
+ margin-right: 0;
+}
 
-  .hamburger {
-    position: fixed;
-    cursor: pointer;
-    right: 5%;
-    top: 4%;
-    transform: translate(-5%, -50%);
-    z-index: 3;
+nav ul li a::before,nav ul li a::after {
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 2px;
+ background-color: crimson;
+ left: 0;
+ transform: scaleX(0);
+ transition: all 0.5s;
+}
+
+nav ul li a::before {
+ top: 0;
+ transform-origin: left;
+}
+
+nav ul li a::after {
+ bottom: 0;
+ transform-origin: right;
+}
+
+nav ul li a:hover::before,nav ul li a:hover::after {
+ transform: scaleX(1);
+}
+/*Fim barras links*/
+.nav-links {
+ display: flex;
+ list-style: none;
+ width: 90%;
+ height: 100%;
+ justify-content: space-around;
+ align-items: center;
+}
+@media screen and (max-width:700px){
+  .line{
+     width: 30px;
+     height: 3px;
+     background: white;
+     margin: 5px;
   }
-  .nav-links {
-    position: fixed;
-    background: black;
-    height: 100vh;
-    width: 100%;
-    flex-direction: column;
-    clip-path: circle(100px at 90% -10%);
-    -webkit-clip-path: circle(100px at 90% -10%);
-    transition: all 1.5s ease-out;
-    z-index: 2;
+  nav{
+     position: relative;
   }
-  .nav-links.open {
-    clip-path: circle(1000px at 100%);
-    -webkit-clip-path: circle(1000px at 100%);
-    pointer-events: all;
+  .hamburger{
+     position: absolute;
+     cursor: pointer;
+     right: 2%;
+     top: 55%;
+     transform: translate(-5%, -50%);
+     transition: all 1s ease-in-out;
+     z-index: 3;
   }
-  .landing {
-    flex-direction: column;
+  .nav-links{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("https://miro.medium.com/max/3060/1*rGiHBnlqf6-koapA2DzUoA.jpeg")
+      center no-repeat;
+     height: 100vh;
+     width: 100%;
+     flex-direction: column;
+     clip-path: circle(50px at 96% 4%);
+     -webkit-clip-path: circle(50px at 96% 4%);
+     transition: all 1s ease-in-out;
+     pointer-events: none;
+     z-index: 2;
   }
-  .nav-links li {
-    opacity: 0;
+  .nav-links.open{
+     clip-path: circle(1000px at 96% 4%);
+     -webkit-clip-path: circle(1000px at 96% 4%);
+     pointer-events: all;
   }
-  .nav-links li a {
-    font-size: 25px;
+  .landing{
+     flex-direction: column;
   }
-  .nav-links li:nth-child(1) {
-    transition: all 0.5s ease 0.2s;
+  .nav-links li{
+     opacity: 0;
   }
-  .nav-links li:nth-child(2) {
-    transition: all 0.5s ease 0.4s;
+  .nav-links li a{
+     font-size: 25px;
   }
-  .nav-links li:nth-child(3) {
-    transition: all 0.5s ease 0.6s;
+  .nav-links li:nth-child(1){
+     transition: all 0.5s ease 0.2s;
   }
-  li.fade {
-    opacity: 1;
+  .nav-links li:nth-child(2){
+     transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3){
+     transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4){
+     transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(5){
+     transition: all 0.5s ease 1s;
+  }
+  li.fade{
+     opacity: 1;
   }
 }
 .logo1{
@@ -149,11 +163,6 @@ nav ul li a:hover::before,nav ul li a:hover::after {
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(45deg,black,red);
   border-radius: 10px;
-}
-@media screen and (max-width: 800px) {
-.logo{
-  width: 150px;
-}
 }
 [type=radio] {
   display: none;
@@ -194,7 +203,6 @@ ul li a{
   color: black;
   text-decoration: none;
   font-size: 3em;
-  margin-left: 100%;
 }
 
 ul li a.twitter:hover{
@@ -611,84 +619,5 @@ ul li a.insta:hover{
   margin-top: 5px;
 }
 /*Fim Projetos*/
-/*Inicio Card*/
-.carta{
-  width: 1000px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.carta .card{
-  position: relative;
-}
-.carta .card .face{
-  width: 300px;
-  height: 200px;
-  transition: 0.5s;
-}
-.carta .card .face.face1{
-  position: relative;
-  background: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  transform: translateY(100px);
-}
-.carta .card:hover .face.face1{
-  background: #ff0057;
-  transform: translateY(0);
-}
-.carta .card .face.face1 .content{
-  opacity: 0.2;
-  transition: 0.5s;
-}
-.carta .card:hover .face.face1 .content{
-  opacity: 1;
-}
-.carta .card .face.face1 .content img{
-  max-width: 100px;
-
-}
-.carta .card .face.face1 .content h3{
-  margin: 10px 0 0;
-  padding: 0;
-  color: #eee;
-  text-align: center;
-  font-size: 1.5em;
-}
-.carta .card .face.face2{
-  position: relative;
-  background: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-  transform: translateY(-100px);
-}
-.carta .card:hover .face.face2{
-  transform: translateY(0);
-}
-.carta .card .face.face2 .content p{
-  margin: 0;
-  padding: 0;
-}
-.carta .card .face.face2 .content a{
-  margin: 15px 0 0;
-  display: inline-block;
-  text-decoration: none;
-  color: #333;
-  padding: 5px;
-  border: 1px solid #333;
-  transition: 0.5s;
-  border-radius: 3px;
-}
-.carta .card .face.face2 .content a:hover{
-  background: crimson;
-  color: #fff;
-}
-/*Fim Card*/
+/*Inicio Ecra*/
+/*Fim Ecra*/
