@@ -7,11 +7,11 @@
           <div class="line"></div>
         </div>
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Sobre Nós</a></li> 
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Contactos</a></li>
-          <li><a href="#">Contactos</a></li>
+          <li><a href="?pagina=Home">Home</a></li>
+          <li><a href="?pagina=Sobre-Nos">Sobre Nós</a></li> 
+          <li><a href="?pagina=Projetos">Projetos</a></li>
+          <li><a href="?pagina=Contactos">Contactos</a></li>
+          <li><a href="?pagina=Contactos">Contactos</a></li>
         </ul>
     </nav>1
   </div>

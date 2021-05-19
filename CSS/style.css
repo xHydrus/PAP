@@ -107,6 +107,7 @@ nav ul li a:hover::before,nav ul li a:hover::after {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url("https://miro.medium.com/max/3060/1*rGiHBnlqf6-koapA2DzUoA.jpeg")
       center no-repeat;
+     position: fixed;
      height: 100vh;
      width: 100%;
      flex-direction: column;
@@ -619,5 +620,3 @@ ul li a.insta:hover{
   margin-top: 5px;
 }
 /*Fim Projetos*/
-/*Inicio Ecra*/
-/*Fim Ecra*/
