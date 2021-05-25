@@ -65,7 +65,7 @@ nav{
 .nav-links{
   display: flex;
   justify-content: space-around;
-  width: 45%;
+  width: 50%;
   z-index: 2;
 }
 .nav-links li{
@@ -125,12 +125,17 @@ transform: scaleX(1);
   margin: 5px;
   transition: all 0.3s ease;
 }
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1200px){
   .nav-links{
      width: 60%;
   }
 }
-@media screen and (max-width: 650px){
+@media screen and (max-width: 1000px){
+   .nav-links{
+     width: 75%;
+  }
+}
+@media screen and (max-width: 800px){
   body{
      overflow-x: hidden;
   }

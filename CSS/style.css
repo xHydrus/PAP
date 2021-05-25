@@ -448,18 +448,16 @@ ul{
 /*Fim Contactos*/
 /*Inicio Projetos*/
 .box{
-  width: 1200px;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 15px;
   margin: 0 auto;
   margin-top: 10%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 .cartaprojeto{
   position: relative;
-  width: 300px;
-  height: 350px;
+  width: 700px;
+  height:400px;
   background: #fff;
   margin: 0 auto;
   border-radius: 4px;
@@ -480,11 +478,11 @@ ul{
   z-index:-1;
 }
 .cartaprojeto:hover:before{
-  transform: rotate(20deg);
+  transform: rotate(15deg);
   box-shadow: 0 2px 20px rgba(0,0,0,.2);
 }
 .cartaprojeto:hover:after{
-  transform: rotate(10deg);
+  transform: rotate(7deg);
   box-shadow: 0 2px 20px rgba(0,0,0,.2);
 }
 .cartaprojeto .imagem{
@@ -500,7 +498,7 @@ ul{
 
 .cartaprojeto:hover .imagem
 {
-  bottom: 80px;
+  bottom: 100px;
 }
 
 .cartaprojeto .imagem img{
@@ -517,14 +515,14 @@ ul{
   left: 10px;
   right: 10px;
   bottom: 10px;
-  height: 60px;
+  height: 80px;
   text-align: center;
 }
 
 .cartaprojeto .detalhes h2{
   margin: 0;
   padding: 0;
-  font-weight: 600;
+  font-weight: 6000;
   font-size: 20px;
   color: #777;
   text-transform: uppercase;
@@ -532,9 +530,24 @@ ul{
 
 .cartaprojeto .detalhes h2 span{
   font-weight: 500;
-  font-size: 16px;
-  color: #f38695;
+  font-size: 20px;
+  color: crimson;
   display: block;
   margin-top: 5px;
+}
+@media screen and (max-width: 1000px){
+  .cartaprojeto{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 800px){
+  .cartaprojeto{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 600px){
+  .cartaprojeto{
+    width: 60%;
+  }
 }
 /*Fim Projetos*/
