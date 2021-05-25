@@ -1,37 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php 
+$servername = "localhost";
+$dBUsername = "root";
+$dBPassword = "";
+$dBName = "pap";
+
+$connect = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
+
+if($connect === false) {
+    die("Conexão falhou: ".mysqli_connect_error());
+}
+?> 
+
+
+ <?php 
+
+        $sql = "SELECT * FROM projetos";
+        $result = mysqli_query($connect, $sql);
+
+        
+    while($dados = mysqli_fetch_array($result)){ 
+    ?>
+
 <div class="box">
       <div class="card cartaprojeto">
         <div class="imagem">
             <img src="./Images/1.jpg" alt="images">
         </div>
         <div class="detalhes">
-            <h2>SomeOne Famous<br><span>Director</span></h2>
+            <h2><?php echo $dados['dadoempresa']?><br><span><?php echo $dados['tipo']?></span></h2>
         </div>
       </div>
-       <div class="card cartaprojeto">
-         <div class="imagem">
-            <img src="./Images/1.jpg" alt="images">
-         </div>
-         <div class="detalhes">
-            <h2>SomeOne Famous<br><span>Producer</span></h2>
-          </div>
-       </div>
-       <div class="card cartaprojeto">
-         <div class="imagem">
-            <img src="./Images/1.jpg" alt="images">
-         </div>
-         <div class="detalhes">
-            <h2>SomeOne Famous<br><span>Actor</span></h2>
-          </div>
-       </div>
   </div>
-</body>
-</html>
+
+<?php }?>

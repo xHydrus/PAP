@@ -13,6 +13,8 @@
         case 'Contactos':
             include "Components/Contactos.php";
         break;
+        case 'login':
+            include "login.php";
         default: break;
     }
 ?>

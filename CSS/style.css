@@ -9,149 +9,68 @@ body{
   align-items: center;
   text-align: center;
 }
-/*Inicio Nav*/
-header {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
-    url("https://miro.medium.com/max/3060/1*rGiHBnlqf6-koapA2DzUoA.jpeg")
-      center no-repeat;
-  background-size: cover;
-  position: relative;
+.burger{
+  display: none;
+  cursor: pointer;
 }
-.navegar{
-  max-width: 100rem;
-  width: 100%;
-  margin: 0 auto;
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
-nav{
-  height: 10vh;
-}
-.nav-links{
-  display: flex;
-  list-style: none;
-  width: 50%;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: auto;
-}
-.nav-links li a{
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-/*Inicio barras links*/
-nav ul li a{
- padding: 1rem 0;
- margin: 0 3rem;
- position: relative;
- letter-spacing: 2px;
-}
-
-nav ul li a:last-child {
- margin-right: 0;
-}
-
-nav ul li a::before,nav ul li a::after {
- content: "";
- position: absolute;
- width: 100%;
- height: 2px;
- background-color: crimson;
- left: 0;
- transform: scaleX(0);
- transition: all 0.5s;
-}
-
-nav ul li a::before {
- top: 0;
- transform-origin: left;
-}
-
-nav ul li a::after {
- bottom: 0;
- transform-origin: right;
-}
-
-nav ul li a:hover::before,nav ul li a:hover::after {
- transform: scaleX(1);
-}
-/*Fim barras links*/
-.nav-links {
- display: flex;
- list-style: none;
- width: 90%;
- height: 100%;
- justify-content: space-around;
- align-items: center;
-}
-@media screen and (max-width:700px){
-  .line{
-     width: 30px;
-     height: 3px;
-     background: white;
-     margin: 5px;
+@media screen and (max-width: 1050px){
+  .nav-links{
+     width: 60%;
   }
-  nav{
-     position: relative;
-  }
-  .hamburger{
-     position: absolute;
-     cursor: pointer;
-     right: 2%;
-     top: 55%;
-     transform: translate(-5%, -50%);
-     transition: all 1s ease-in-out;
-     z-index: 3;
+}
+@media screen and (max-width: 650px){
+  body{
+     overflow-x: hidden;
   }
   .nav-links{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
-    url("https://miro.medium.com/max/3060/1*rGiHBnlqf6-koapA2DzUoA.jpeg")
-      center no-repeat;
-     position: fixed;
-     height: 100vh;
-     width: 100%;
+     position: absolute;
+     right: 0px;
+     height: 90vh;
+     top: 10vh;
+     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+   url("https://miro.medium.com/max/3060/1*rGiHBnlqf6-koapA2DzUoA.jpeg")
+     center no-repeat;
+     display: flex;
      flex-direction: column;
-     clip-path: circle(50px at 96% 4%);
-     -webkit-clip-path: circle(50px at 96% 4%);
-     transition: all 1s ease-in-out;
-     pointer-events: none;
-     z-index: 2;
-  }
-  .nav-links.open{
-     clip-path: circle(1000px at 96% 4%);
-     -webkit-clip-path: circle(1000px at 96% 4%);
-     pointer-events: all;
-  }
-  .landing{
-     flex-direction: column;
+     align-items: center;
+     width: 50%;
+     transform: translateX(100%);
+     transition: transform 0.5s ease-in;
   }
   .nav-links li{
      opacity: 0;
   }
-  .nav-links li a{
-     font-size: 25px;
-  }
-  .nav-links li:nth-child(1){
-     transition: all 0.5s ease 0.2s;
-  }
-  .nav-links li:nth-child(2){
-     transition: all 0.5s ease 0.4s;
-  }
-  .nav-links li:nth-child(3){
-     transition: all 0.5s ease 0.6s;
-  }
-  .nav-links li:nth-child(4){
-     transition: all 0.5s ease 0.8s;
-  }
-  .nav-links li:nth-child(5){
-     transition: all 0.5s ease 1s;
-  }
-  li.fade{
-     opacity: 1;
+  .burger{
+     display: block;
   }
 }
-.logo1{
-  width: 5%;
+.nav-active{
+  transform: translateX(0%);
+}
+@keyframes navLinkFade{
+  from{
+     opacity: 0;
+     transform: translateX(50px);
+  }to{
+     opacity: 1;
+     transform: translateX(0px);
+  }
+}
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 /*Fim Nav*/
 /*Inicio ScrollBar*/
@@ -193,35 +112,35 @@ ul{
   display: flex;
 }
 
-ul li{
+.icons ul li{
   position: relative;
-  list-style: none;
+  list-style: none; 
   margin: 0 20px;
   cursor: pointer;
 }
 
-ul li a{
+.icons ul li a{
   color: black;
   text-decoration: none;
   font-size: 3em;
 }
 
-ul li a.twitter:hover{
+.icons li a.twitter:hover{
   transition: 0.2s;
   color: #1da1f2;
   border-bottom: 4px solid #1da1f2;
 }
-ul li a.face:hover{
+.icons li a.face:hover{
   transition: 0.2s;
   color: #4267b2;
   border-bottom: 4px solid #4267b2;
 }
-ul li a.linkedin:hover{
+.icons li a.linkedin:hover{
   transition: 0.2s;
   color: #2867b2;
   border-bottom: 4px solid #2867b2;
 }
-ul li a.insta:hover{
+.icons li a.insta:hover{
   transition: 0.2s;
   color: #C13584;
   border-bottom: 4px solid #C13584;
@@ -333,7 +252,6 @@ ul li a.insta:hover{
   display:flex;
   justify-content: center;
   align-items: center;
-  z-index: 9;
 }
 .loader {
   position: absolute;
