@@ -24,7 +24,7 @@ if($connect === false) {
 <div class="box">
       <div class="card cartaprojeto">
         <div class="imagem">
-            <img src="./Images/1.jpg" alt="images">
+            <img src="./Images/<?php echo $dados['img'] ?>" alt="images">
         </div>
         <div class="detalhes">
             <h2><?php echo $dados['dadoempresa']?><br><span><?php echo $dados['tipo']?></span></h2>

@@ -221,24 +221,23 @@ ul{
 }
 
 #slide1 { 
-  background-image: url(https://4.bp.blogspot.com/-qAtFQobL7G0/XIJdNxW4aQI/AAAAAAAAG1s/YwlbQmhEp8QGAsKxLqO-bbPOFHjElbqcQCEwYBhgL/w1200-h630-p-k-no-nu/4K%2BLandscape%2BWallpaper%2B54.jpg); 
-  background-size: cover;
-}
-#slide2 { background-image: url(
-  https://i.pinimg.com/originals/a0/b4/2f/a0b42fae1c763e7af794e6b665718bf8.jpg); 
-  background-size: cover;
-}
+  background-image: url(../Images/img.jpeg); 
+  background-size: absolute;
+} 
+#slide2 { background-image: url(../Images/teste.jpg); 
+  background-size: absolute;
+} 
 #slide3 { 
-  background-image: url('BT.png'); 
+  background-image: url(../Images/BT.png); 
   background-size: cover;
 }
 #slide4 { 
-  background-image: url(https://miro.medium.com/max/3060/1*rGiHBnlqf6-koapA2DzUoA.jpeg); 
+  background-image: url(../Images/img.jpeg); 
   background-size: cover;
 }
 #slide5 { 
-  background-image: url(https://i.ytimg.com/vi/rPscqv-QZCU/maxresdefault.jpg); 
-  background-size: cover;
+  background-image: url(../Images/teste.jpg); 
+  background-size: absolute;
 }
 /*Fim Carrosel*/
 /*Inicio PreLoadder*/
@@ -252,6 +251,7 @@ ul{
   display:flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 .loader {
   position: absolute;
@@ -472,7 +472,7 @@ ul{
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 4px;
+  border-radius: 10px;
   background: #fff;
   transition: 0.5s;
   z-index:-1;
